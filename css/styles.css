@@ -1,22 +1,29 @@
-body {
-    color: #757575;
-    background-color: #E5E5E5;
-}
-
 /* цвет заголовков #212121 */
 /* цвет текста #757575 */
 /* белый  #FFFFFF */
 /* акцент #2196F3*/
-/* цвет основного фона #E5E5E5 */
-/* вторичный цвет фона #F5F4FA */
+
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196F3;
+    --primery-bg-color: #FFFFFF;
+    --secondary-bg-color: #2F303A;
+    --secondary-text-color: #FFFFFF;
+} 
+
+
+body {
+    color: var(--primary-text-color);
+    background-color: var(--primery-bg-color);
+}
+
+
  
 ul {
     list-style: none;
 }
 
-.section-title {
-    color: #212121;
-}
 
 /* Header */
 
@@ -24,35 +31,94 @@ ul {
     color: black;
 }
 .logo-web {
-    color: #2196F3;
+    color: var(--accent-color);
 }
 
+/* navigation */
 
 .menu-nav .link {
-    color: #212121;   
+    color: var(--title-text-color);   
 }
 .menu-nav .link:hover, 
 .menu-nav .link:focus {
-    color: #2196F3;
+    color: var(--accent-color);
 }
 
+.menu-nav .link.current {
+   color: var(--accent-color);
+}
+
+/* contacts header & contacts footer */
+
 .contacts .link {
-    color: #757575;
+    color: var(--primary-text-color);
+}
+.contacts .link.adds {
+    color: var(--secondary-text-color);
 }
 .contacts .link:hover, 
 .contacts .link:focus {
-    color: #2196F3;
+    color: var(--accent-color);
 }
-
-
 
 /* Section hero */
 
-.hero-title {
-    color: #ffffff;
+.hero {
+    background-color: var(--secondary-bg-color);
 }
-.hero-button {
-    color: #ffffff;
-    background-color: #2196F3;
+.hero .title {
+    color: var(--secondary-text-color);
+}
+.hero .button {
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+}
+.hero .button:hover,
+.hero .button:focus {
+    background-color: var(--title-text-color);
 }
 
+/* Section features */
+
+.features-list .title {
+    color: var(--title-text-color);
+}
+
+
+
+/* Section functions */
+
+.functions-title {
+    color: var(--title-text-color);
+}
+
+
+
+
+/* Section team */ 
+
+.team-title {
+    color: var(--title-text-color);
+}
+.team .card {
+    color: var(--title-text-color);
+}
+.team {
+    background-color: #F5F4FA;
+}
+
+/* footer */
+
+.footer {
+    background-color: var(--secondary-bg-color);
+}
+.address .link {
+    color: var(--primary-text-color);
+}
+.address .link.adds {
+    color: var(--secondary-text-color);
+}
+.address .link:hover, 
+.address .link:focus {
+    color: var(--accent-color);
+}
