@@ -16,12 +16,18 @@
 body {
     color: var(--primary-text-color);
     background-color: var(--primery-bg-color);
+    font-family: 'Roboto';
 }
 
-
+.link, .logo, .logo-web {
+    text-decoration: none;
+}
  
-ul {
+.list {
     list-style: none;
+}
+.title {
+    color: var(--title-text-color);
 }
 
 
@@ -48,7 +54,7 @@ ul {
    color: var(--accent-color);
 }
 
-/* contacts header & contacts footer */
+/* contacts header*/
 
 .contacts .link {
     color: var(--primary-text-color);
@@ -80,7 +86,7 @@ ul {
 
 /* Section features */
 
-.features-list .title {
+.features .title {
     color: var(--title-text-color);
 }
 
@@ -97,7 +103,7 @@ ul {
 
 /* Section team */ 
 
-.team-title {
+.team .title {
     color: var(--title-text-color);
 }
 .team .card {
