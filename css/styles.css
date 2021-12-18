@@ -9,17 +9,23 @@
     --accent-color: #2196F3;
     --primery-bg-color: #FFFFFF;
     --secondary-bg-color: #2F303A;
+    --header-logo-color: #000;
 } 
 
 body {
     color: var(--primary-text-color);
     background-color: var(--primery-bg-color);
     font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
     letter-spacing: 0.03em;
 }
 
-.link, .logo, .logo-web {
+.link {
     text-decoration: none;
+    color: inherit;
 }
  
 .list {
@@ -30,68 +36,68 @@ body {
     color: var(--title-text-color);
 }
 
+.title-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
 .button {
     font-family: inherit;
     cursor: pointer;
 }
 
 
+
 /* -------- Header ------- */
 
 /* Logo */
-.header .logo {
-    color: black;
-}
-.logo-web {
+
+.logo {
     color: var(--accent-color);
-}
-.logo, .logo-web {
     font-family: "Raleway", sans-serif;
+    font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
+}
+.logo-header {
+    color: var(--header-logo-color);
+}
+.logo-footer {
+    color: var(--primery-bg-color);
 }
 
 /* navigation */
 
-.menu-nav .link {
+.menu-nav-list {
     color: var(--title-text-color);
+}
+.menu-nav-link {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-   
 }
-.menu-nav .link:hover, 
-.menu-nav .link:focus {
+.menu-nav-link:hover, 
+.menu-nav-link:focus,
+.menu-nav-link.current {
     color: var(--accent-color);
-}
-
-.menu-nav .link.current {
-   color: var(--accent-color);
 }
 
 /* contacts header*/
-
-.contacts .link {
-    color: var(--primary-text-color);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-
-}
-.contacts .link:hover, 
-.contacts .link:focus {
-    color: var(--accent-color);
-}
 
 /* Section hero */
 
 .hero {
     background-color: var(--secondary-bg-color);
 }
-.hero .title {
-    color: white;
+.hero-title {
+    color: var(--primery-bg-color);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -99,8 +105,8 @@ body {
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
-.hero .button {
-    color: white;
+.hero-button {
+    color: var(--primery-bg-color);
     background-color: var(--accent-color);
     font-weight: 700;
     font-size: 16px;
@@ -108,51 +114,38 @@ body {
     align-items: center;
     letter-spacing: 0.06em;
 }
-.hero .button:hover,
-.hero .button:focus {
+.hero-button:hover,
+.hero-button:focus {
     background-color: #188CE8;
 }
 
 /* Section features */
 
-.features .title {
+.features-title {
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
 }
 
-.features .text {
-    font-size: 14px;
-    line-height: 1.71;
-}
-
 /* Section functions */
 
-.functions .title {
+.section-title {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
 }
-
 
 /* Section team */ 
 
 .team {
     background-color: #F5F4FA;
 }
-.team .title {
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center; 
-}
-.team .card {
+.team-card {
     color: var(--title-text-color);
     font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    text-align: center;
 }
-.team .text {
+.team-text,
+.team-card {
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -164,49 +157,47 @@ body {
 .footer {
     background-color: var(--secondary-bg-color);
 }
-.footer .logo {
-    color: white;
-}
 .address {
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
 }
-.address .link {
+.address-link {
     color: rgba(255, 255, 255, 0.6);
 }
-.address .link.adds {
-    color: white;
+.address-link.adds {
+    color: var(--primery-bg-color);
 }
-.address .link:hover, 
-.address .link:focus {
+.address-link:hover, 
+.address-link:focus {
     color: var(--accent-color);
 }
 
 /*-------------- Page portfolio ------------ */
 
 /* filter */
-.filter .button {
-    color: #212121;
+.filter-button {
+    color: var(--title-text-color);
     background-color: #F5F4FA;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
 }
-.filter .button:hover,
-.filter .button:focus {
-    color: white;
+.filter-button:hover,
+.filter-button:focus,
+.current-btn {
+    color: var(--primery-bg-color);
     background-color: var(--accent-color);
 }
 
 /* project */
-.project .title {
+.project-title {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
 } 
-.project .text {
-    color: var(--primary-text-color);
+.project-text {
+    color: inherit;
     font-size: 16px;
     line-height: 1.87;
 }
